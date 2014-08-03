@@ -1,12 +1,13 @@
 from django.conf.urls import patterns, include, url
-
+from contact import views
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'GDG.views.home', name='home'),
+    url(r'^$', 'contact.views.home'),
+    url(r'contactus^$', 'contact.views.contactus'),
     # url(r'^GDG/', include('GDG.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
